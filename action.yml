@@ -1,0 +1,28 @@
+name: "Slashcloud Action"
+description: "Build and upload Slashcloud bots"
+author: "TiltMeSenpai"
+inputs:
+  preBuild:
+    description: "Commands to run pre-build"
+    default: ""
+  buildCommand:
+    description: "Command used to build project"
+    default: "worker-build"
+  postBuild:
+    description: "Commands to run post-build"
+    default: ""
+  preDeploy:
+    description: "Commands to run between build and deploy"
+    default: ""
+  deployCommand:
+    description: "Command used to deploy to Cloudflare"
+    default: "wrangler publish"
+  postDeploy:
+    description: "Commands to run after deploying to Cloudflare"
+    default: ""
+  buildJson:
+    description: "Command to run to generate command JSON"
+    default: "cargo run"
+  jsonFile:
+    description: "Command JSON file to upload"
+    default: "command.json"
